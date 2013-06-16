@@ -24,6 +24,7 @@ def extract_tags(sentence, topK=20):
     for w in words:
         if len(w.strip()) < 2: continue
         if w.lower() in stop_words: continue
+        if w.isdigit(): continue
         # added by holys for personal usage.
         w = w.lower()
 
